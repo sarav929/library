@@ -68,6 +68,16 @@ function setButtons() {
     })
 }
 
+function formatString(string) {
+    const words = string.split(" ")
+
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].substr(1)
+    }
+
+    return words.join(" ")
+}
+
 // show modal with form when newBook is clicked //
 
 addBook.addEventListener('click', () => {
@@ -94,10 +104,12 @@ form.addEventListener('submit', () => {
         status = "✖ Not Read"
     }
 
-    newBook = new Book(title.value, author.value, pages.value, status)
+
+    newBook = new Book(formatString(title.value), formatString(author.value), pages.value, status)
 
     addBookToLibrary(myLibrary, newBook)
     printLibrary(myLibrary)
+    form.reset()
 })
 
 
