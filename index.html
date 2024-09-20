@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6aff11957b.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <script src="main.js" defer></script>
 
     <h1>My Library</h1>
 
@@ -15,7 +16,7 @@
 
     </div>
 
-    <button type="button" id="add-book">NEW BOOK</button>
+    <button type="button" id="add-book"><i class="fa-solid fa-plus"></i> ADD BOOK</button>
 
     <dialog class="modal" id="modal">
         <div class="modal-container">
@@ -25,7 +26,8 @@
                 <label>Pages <br><input type="number" min="1" id="pages" required></label>
                 <label>Have you read it? <br>
                 <input type="checkbox" id="read"/></label>
-                <button type="submit" id="add-book">ADD</button>
+                <button type="submit" id="add-book">SAVE</button>
+                <button type="button" id="close-modal">CLOSE</button>
             </form>
         </div>
     </dialog>
