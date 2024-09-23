@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6aff11957b.js" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="icon" href="../Library/img/books.png">
 </head>
 <body>
-
     <h1>My Library</h1>
+
+    <button type="button" id="add-book">ADD BOOK</button>
 
     <div class="library" id="library">
 
-    </div>
 
-    <button type="button" id="add-book"><i class="fa-solid fa-plus"></i> ADD BOOK</button>
+    </div>
 
     <dialog class="modal" id="modal">
         <div class="modal-container">
@@ -26,12 +30,18 @@
                 <label>Pages <br><input type="number" min="1" id="pages" required></label>
                 <label>Have you read it? <br>
                 <input type="checkbox" id="read"/></label>
-                <button type="submit" id="add-book">SAVE</button>
-                <button type="button" id="close-modal">CLOSE</button>
+                <div class="button-container">
+                    <button type="submit" id="add-book">SAVE</button>
+                    <button type="button" id="close-modal">CLOSE</button>
+                </div>
+                
             </form>
         </div>
     </dialog>
 
+    <footer> 
+        created by sarav929 | <a href="https://github.com/sarav929"><i class="devicon-github-original"></i></a>
+    </footer>
     
 </body>
 

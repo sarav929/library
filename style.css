@@ -1,55 +1,140 @@
 * {
     box-sizing: border-box;
+    color: #efeff4;
+
+    --accentcolor: #2196f3;
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-}
-
-ul, li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    line-height: 1.5rem;
+    background-color: #18171d;
+    
 }
 
 h1 {
-    margin: auto;
+    margin: 20px auto 10px auto;
+    font-size: 50px;
+    font-family: 'Playfair Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: .2em;
+    
 }
 
+
 .library {
-    background-color: rgb(210, 210, 210);
-    display: flex;
-    padding: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(500px, 1fr));
     gap: 20px;
-    width: 100vw;
+    padding: 50px 60px;
+    gap: 20px;
+    width: 80%;
+
 }
 
 .book-card {
-    flex-direction: column;
-    gap: 10px;
-    background-color: white;
-    border: solid;
+    padding: 0px;
     border-radius: 10px;
+    background-color: #2d2c32;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+}
+
+.read-yes {
+    border: solid 2px var(--accentcolor) ;
+}
+
+.read-no {
+    border: solid 2px rgb(156, 38, 38) ;
+}
+
+.book-details {
     display: flex;
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    background-color: #2d2c32;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 25%;
+    background-color: #2d2c32;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    & button {
+        width: 60%;
+        padding: 15px;
+    }
+}
+
+#status-bar {
+    background-color: #18171d;
+    color: #efeff4;
+    font-size: 1.4rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    line-height: .5em;
+}
+
+#p-title {
+    margin-top: 10px;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-style: oblique;
     text-align: center;
+    font-family: 'Playfair Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#p-author {
+    font-size: 1.4rem;
+    font-family: 'Playfair Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#p-pages { 
+    margin-top: 40px;
+    margin-bottom: 35px;
 }
 
 button {
-    width: 150px;
+    width: fit-content;
     padding: 10px 20px;
     border: none;
     border-radius: 50px;
+    background-color: var(--accentcolor);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.actions button {
+    background-color: #18171d;
 }
 
 .remove {
     width: fit-content;
+}
+
+.modal {
+    background-color: #2d2c32;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
 }
 
 form {
@@ -58,9 +143,44 @@ form {
     gap: 20px;
     text-align: center;
     align-items: center;
+    background-color: #2d2c32;
+}
+
+.button-container {
+    background-color: #2d2c32;
+}
+
+input {
+    background-color: #efeff4;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: #18171d;
 }
 
 label {
     padding: .5rem;
     line-height: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: .8rem;
+    background-color: #2d2c32;
+}
+
+.modal {
+    position: fixed;
+    top: 20%;
+    width: clamp(300px, 30vw, 30vw);
+    padding: 20px 0 50px 0;
+}
+
+.button-container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    & button {
+        width: 10em;
+    }
 }

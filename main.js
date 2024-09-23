@@ -33,13 +33,20 @@ function addBookCard(book) {
 
     if (book.read == "✔ Read") {
         buttonText = "Mark as Unread"
+        card.classList.add('read-yes')
     } else {
         buttonText = "Mark as Read"
+        card.classList.add('read-no')
     }
        
-    card.innerHTML = `<div class="status">${book.read}</div><p>${book.title}</p> <p>${book.author}</p> <p>${book.pages} pages </p>
-    <button class="remove-book" id="${myLibrary.indexOf(book)}">remove</button>
-    <button class="mark-read" id="${myLibrary.indexOf(book)}">${buttonText}</button>`
+    card.innerHTML = `<div id="status-bar">${book.read}</div>
+    <div class="book-details">
+        <p id="p-title">${book.title}</p> <p id="p-author">${book.author}</p> <p id="p-pages">${book.pages} pages</p>
+    </div>
+    <div class="actions">
+        <button class="mark-read" id="${myLibrary.indexOf(book)}">${buttonText}</button>
+        <button class="remove-book" id="${myLibrary.indexOf(book)}">Remove</button>
+    </div>`
     card.classList.add("book-card")   
 }
 
