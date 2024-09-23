@@ -85,8 +85,6 @@ function formatString(string) {
     return words.join(" ")
 }
 
-// show modal with form when newBook is clicked //
-
 addBook.addEventListener('click', () => {
     modal.show()
 })
@@ -94,8 +92,6 @@ addBook.addEventListener('click', () => {
 closeModal.addEventListener('click', () => {
     modal.close()
 })
-
-// create new book and add it to library
 
 form.addEventListener('submit', () => {
 
